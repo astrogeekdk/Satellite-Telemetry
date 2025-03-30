@@ -32,7 +32,7 @@ try:
         data = packet.serialize()
         data = hamming_encode(data)
         _, data = flip_random_bit(data)
-        print("Sending:", data)
+        print("Sending Packet:", data)
         print("--------------------")
         client_socket.sendto(str(data).encode(), server_address)
 

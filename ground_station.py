@@ -24,7 +24,7 @@ print("Live on ", server_address)
 while True:
     try:
         data, client_address = server_socket.recvfrom(1024)
-        print(f"Data: {data.decode()}")
+        print(f"Received Packet: {data.decode()}")
         decoded_data = hamming_decode(data.decode())
         alt, vel, volt, temp = decode(decoded_data)
         print("Altitude: ", alt)
